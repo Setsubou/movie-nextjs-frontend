@@ -1,10 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
+import { checkLogin } from "../middlewares/checkLogin";
+import { checkAuth } from "../middlewares/checkMovie";
+import { stackMiddlewares } from "../middlewares/stackMiddleware";
 
-export function middleware(req: NextRequest) {
-    console.log("Middleware running on:", req.nextUrl.pathname);
-    return NextResponse.redirect(new URL("/", req.url));
-}
+const middlewares = [checkAuth, checkLogin]
 
-export const config = {
-    matcher: ["/movies", "/movies/:path*"],
-}
+export default stackMiddlewares(middlewares)
