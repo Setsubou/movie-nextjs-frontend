@@ -1,3 +1,5 @@
+This project is made in conjunction with its [Backend Counterpart](https://github.com/Setsubou/movie-go-backend/)
+
 # Setting up Environment Variable
 
 First, take a copy of `.env.example` and rename it to `.env`.
