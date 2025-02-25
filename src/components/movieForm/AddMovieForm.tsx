@@ -104,7 +104,7 @@ export default function AddMovieForm() {
       genre: selectedGenres.map((id) => ({ id })),
     };
 
-    const response = await fetch(`${apiUrl}/api/v1/movie`, {
+    const response = await fetch(`${apiUrl}/api/v1/movie/`, {
       method: "POST",
       credentials: "include",
       headers: {
